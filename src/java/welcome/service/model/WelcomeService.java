@@ -18,7 +18,7 @@ public final class WelcomeService {
     
     }
     public String outputWelcomeMessage() {    
-	return this.currentTime + " " + this.guestName;
+	return this.getWelcomeMessage() + ", " + this.guestName;
     }
     
     public void setGuestName(String guestName) {
@@ -26,8 +26,24 @@ public final class WelcomeService {
     
     }
     
+    public String getWelcomeMessage() {
+	String msg = null;
+	int hourNow = this.currentTime.getHourOfDay();
+	
+	if(hourNow > 0 && hourNow < 12) {	    
+	    msg = "Good Morning";
+	} else if(hourNow < 17) {
+	    msg = "Good Afternoon";
     
+	} else if (hourNow < 20) {	    
+	    msg = "Good Evening";
+	    
+	} else {	    
+	    msg = "Good Night";	
+	}
 	
-	
-	
+	return msg;
+    
     }
+  
+}
