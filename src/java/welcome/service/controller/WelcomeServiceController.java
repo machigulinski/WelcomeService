@@ -7,8 +7,6 @@
 package welcome.service.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -76,7 +74,7 @@ public class WelcomeServiceController extends HttpServlet {
         // For some applications, we would not want to create a new one each time.
         WelcomeService ws = new WelcomeService(n);
         // Always a good idea to trim and/or validate input data
-        String result = ws.getGuestName();
+        String result = ws.outputWelcomeMessage();
 
         // Parameters are read only Request object properties, but attributes
         // are read/write. We can use attributes to store data for use on
