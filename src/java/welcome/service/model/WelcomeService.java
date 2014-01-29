@@ -32,14 +32,10 @@ public final class WelcomeService {
 	
 	if(hourNow > 0 && hourNow < 12) {	    
 	    msg = "Good Morning";
-	} else if(hourNow < 17) {
-	    msg = "Good Afternoon";
-    
-	} else if (hourNow < 20) {	    
+	} else if(hourNow < 17 && hourNow < 20) {
+	    msg = "Good Afternoon";    
+	} else   {	    
 	    msg = "Good Evening";
-	    
-	} else {	    
-	    msg = "Good Night";	
 	}
 	
 	return msg;
