@@ -19,7 +19,7 @@ import welcome.service.model.WelcomeService;
  *
  * @author Machi
  */
-@WebServlet(name = "WelcomeServiceController", urlPatterns = {"/welcomecontrol"})
+@WebServlet(name = "WelcomeServiceController", urlPatterns = {"/SubmitName.do"})
 public class WelcomeServiceController extends HttpServlet {
     private static final String RESULT_PAGE = "welcomepage.jsp";
 
